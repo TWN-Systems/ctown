@@ -42,7 +42,7 @@ export default function Home() {
             className="underline duration-500 hover:text-zinc-300"
           >
             twn.systems
-          </Link> A collective of researchers, developers and IT engineers focused oncreating systems built to last. Our goal is Giving Everyone. More. Options. Open-Source first, prioritizing data & digital sovereignty.
+          </Link> A collective of researchers, developers and IT engineers focused on creating systems built to last. Our goal is Giving Everyone. More. Options. Open-Source first, prioritizing data & digital sovereignty.
         </h2>
       </div>
     </div>
