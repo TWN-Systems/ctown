@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "claytownsend.com.au",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "Founder of twn.systems | Systems Engineer in Launceston, Tasmania",
     url: "https://claytownsend.com.au",
     siteName: "claytownsend.com.au",
     images: [
