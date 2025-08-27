@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "claytownsend.com.au",
+    template: "%s | claytownsend.com.au",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Founder of twn.systems",
   openGraph: {
-    title: "chronark.com",
+    title: "claytownsend.com.au",
     description:
       "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    url: "https://claytownsend.com.au",
+    siteName: "claytownsend.com.au",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://www.claytownsend.com.au/og.png",
         width: 1920,
         height: 1080,
       },
