@@ -20,16 +20,18 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "pimpyourdocs")!;
-  const top2 = allProjects.find((project) => project.slug === "itlearn")!;
-  const top3 = allProjects.find((project) => project.slug === "homelabwiki")!;
+    const featured =
+    allProjects.find((p) => p.slug === "pimpyourdocs") ?? allProjects[0];
+  const top2 =
+    allProjects.find((p) => p.slug === "itlearn") ??
+    allProjects.find((p) => p.slug !== featured?.slug);
+  const top3 =
+    allProjects.find((p) => p.slug === "homelabwiki") ??
+    allProjects.find((p) => p.slug !== featured?.slug && p.slug !== top2?.slug);
   const sorted = allProjects
     .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
+    .filter((project) =>
+      ![featured?.slug, top2?.slug, top3?.slug].includes(project.slug)
     )
     .sort(
       (a, b) =>
@@ -94,7 +96,7 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
+            {[top2, top3].filter(Boolean).map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>
